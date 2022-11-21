@@ -226,7 +226,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/signin"
+                android:id="@+id/bt_signin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

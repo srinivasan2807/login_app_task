@@ -28,6 +28,9 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        bt_signin.setOnClickListener {
+            startActivity(Intent(this@RegisterActivity,LoginActivity::class.java))
+        }
         et_name.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -162,7 +165,8 @@ class RegisterActivity : AppCompatActivity() {
                 email = email.toString(),
                 sessionStart = CommonUtils.getCurrentDateTime(),
                 sessionEnd = "",
-                sessionDuration = ""
+                sessionDuration = "",
+                otp = otp
             )
            LoginDatabase.getInstance(this@RegisterActivity).registerDao().addUser(userDetail)
             startActivity(Intent(this@RegisterActivity,MainActivity::class.java))

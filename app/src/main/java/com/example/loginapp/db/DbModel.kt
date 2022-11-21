@@ -16,10 +16,11 @@ class DbModel {
         @ColumnInfo(name = "dob") var dateOfBirth: String,
         @ColumnInfo(name = "profilepic") var profilePic: String,
         @ColumnInfo(name = "mobile") var mobile: Int,
+        @ColumnInfo(name = "otp") var otp: Int,
         @ColumnInfo(name = "email") var email: String,
         @ColumnInfo(name = "sessionstart") var sessionStart: String,
         @ColumnInfo(name = "sessionend") var sessionEnd: String,
-        @ColumnInfo(name = "sessionduration") var sessionDuration: String
+        @ColumnInfo(name = "sessionduration") var sessionDuration: String,
     ) {
         @PrimaryKey(autoGenerate = true)
         @ColumnInfo(name = "id")
